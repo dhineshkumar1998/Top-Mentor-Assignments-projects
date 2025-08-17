@@ -1,0 +1,39 @@
+use radse;
+create table godplace (
+godid int primary key,
+godloc varchar(10) not null,
+godadd varchar(10),
+GID INT);
+
+insert into godplace values ("1","chennai","TN",1);
+insert into godplace values ("2","cochin","KL",2);
+insert into godplace values ("3","coimbatore","TN",3);
+
+SELECT * FROM GODPLACE;
+DROP TABLE GODPLACE;
+DROP TABLE GOD;
+CREATE TABLE GOD(
+GID INT PRIMARY KEY AUTO_INCREMENT,
+GNAME VARCHAR(20) NOT NULL,
+GROLE VARCHAR(20),
+GBRANCHID INT,
+CONSTRAINT GOD_KEY FOREIGN KEY(GBRANCHID) REFERENCES godplace(godid)
+ON DELETE SET NULL);
+
+INSERT INTO GOD VALUES (01, "SHIVA", "DESTROYER", 01);
+INSERT INTO GOD VALUES (02, "VISHNU", "PROTECTOR", 02);
+INSERT INTO GOD VALUES (03, "BRAHMAP","CREATOR", 03);
+
+DELETE FROM GODPLACE
+WHERE GODID = 2;
+
+SELECT * FROM GOD;
+SELECT * FROM GODPLACE;
+
+ALTER TABLE GOD
+DROP FOREIGN KEY GOD_KEY;
+
+
+
+
+

@@ -1,0 +1,18 @@
+reading a file
+- xls, csv, pdf, json
+
+string upper, lower
+
+date handling
+
+coulmn handling
+
+merge conditions
+
+strip
+
+data types
+
+astype
+
+lock operator
